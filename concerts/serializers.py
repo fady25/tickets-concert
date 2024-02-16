@@ -4,6 +4,6 @@ from .models import Concert
 class ConcertSerializer(serializers.ModelSerializer):
     class Meta:
         model = Concert
-        fields = '__all__'
+        fields = 'name','date','location'
 
         

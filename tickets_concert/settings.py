@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'tickets',
     'concerts',
     'tickets_concert',
-    'persons'
-    #'persons.apps.PersonsConfig',
+    'persons',
 ]
 
 MIDDLEWARE = [
