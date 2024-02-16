@@ -23,5 +23,6 @@ urlpatterns = [
     path('tickets/', include('tickets.urls')),
     path('persons/', include('persons.urls')),
     path('concerts/', include('concerts.urls')),
-
+    path('accounts/', include('django.contrib.auth.urls')),  # Include authentication URLs
+   
 ]

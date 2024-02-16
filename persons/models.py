@@ -7,10 +7,10 @@ class Person(models.Model):
     age = models.IntegerField()
     gender = models.CharField(max_length=100)
     Job_title = models.CharField(max_length=100)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="persons",default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="persons")
 
     def __str__(self):
-        return self.name
+        return f"Person for {self.user.get_full_name()}"
     
 
 

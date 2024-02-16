@@ -7,11 +7,11 @@ class PersonListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = PersonSerializer
    
     def get_queryset(self):
-        concert_id = self.request.query_params.get('concert_id')
+        concert = self.request.query_params.get('concert')
         persons = Person.objects.all ()
         
-        if concert_id is not None:
-            persons = Person.objects.filter(tickets__concert_id=concert_id)
+        if concert:
+            persons = Person.objects.filter(tickets__concert_id=concert)
         
         return persons 
     

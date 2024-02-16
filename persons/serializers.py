@@ -5,13 +5,13 @@ from django.contrib.auth.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = 'email','first_name'
 
 class PersonSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     class Meta:
         model = Person
-        fields = '__all__'
+        fields = 'name','gender','age','user'
     
     def create(self, validated_data):
         user_data = validated_data.pop('user')
