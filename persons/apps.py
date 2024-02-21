@@ -5,5 +5,4 @@ class PersonsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'persons'
 
-    def ready(self):
-        import persons.signals
+    
